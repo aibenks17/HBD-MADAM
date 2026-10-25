@@ -1,0 +1,599 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211914">
+<title>Happy Birthday Madam Madam Ara Ayu 🍂</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+  --bg: #211914;
+  --panel: #30231d;
+  --cream: #f6e8d2;
+  --muted: #c5aa8c;
+  --gold: #e5bd86;
+  --red: #9c5148;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 15% 5%, #56352655, transparent 45%),
+    radial-gradient(ellipse at 90% 60%, #6b382633, transparent 40%),
+    var(--bg);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+}
+
+button { font: inherit; }
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+main, header, footer { position: relative; z-index: 1; }
+
+nav {
+  max-width: 1050px;
+  margin: auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-size: 19px;
+}
+
+.brand span { color: var(--gold); }
+
+.music-btn {
+  color: var(--cream);
+  background: #ffffff0a;
+  border: 1px solid #e5bd8655;
+  border-radius: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.music-btn:hover {
+  background: #e5bd8618;
+  border-color: var(--gold);
+}
+
+.hero {
+  min-height: 660px;
+  max-width: 1050px;
+  margin: auto;
+  padding: 70px 24px 90px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(44px, 6vw, 75px);
+  line-height: 1.06;
+  margin: 22px 0;
+  letter-spacing: -2px;
+}
+
+h1 em {
+  display: block;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.hero-desc {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 410px;
+  font-size: 14px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #271a12;
+  padding: 14px 21px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: .25s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: #f4d6a8;
+}
+
+.hero-photo {
+  position: relative;
+  max-width: 390px;
+  width: 100%;
+  margin: auto;
+  padding: 12px 12px 45px;
+  background: #f4e7d4;
+  color: #38251c;
+  transform: rotate(3deg);
+  box-shadow: 0 25px 70px #0005;
+  animation: float 5s ease-in-out infinite;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 405px;
+  object-fit: cover;
+  background: #dac4a8;
+}
+
+.photo-caption {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.tape {
+  position: absolute;
+  top: -12px;
+  left: 39%;
+  width: 90px;
+  height: 27px;
+  background: #e5bd8680;
+  transform: rotate(-8deg);
+}
+
+.photo-stamp {
+  position: absolute;
+  right: -18px;
+  bottom: 75px;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff0dc;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+  transform: rotate(12deg);
+  border: 2px dashed #f2d3af88;
+}
+
+.section {
+  max-width: 950px;
+  padding: 75px 24px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font: 500 clamp(32px, 4vw, 45px)/1.2 'Playfair Display', serif;
+  margin: 15px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.gallery-card {
+  background: #f2e4d0;
+  color: #3c291f;
+  padding: 10px 10px 18px;
+  box-shadow: 0 15px 35px #0003;
+}
+
+.gallery-card:nth-child(1) { transform: rotate(-2deg); }
+.gallery-card:nth-child(2) { transform: rotate(2deg); }
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  background: #d9c2a6;
+}
+
+.gallery-card p {
+  font: italic 18px 'Playfair Display', serif;
+  text-align: center;
+  margin: 14px 0 0;
+}
+
+.note {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 35px;
+  background: linear-gradient(135deg, #38271f, #2a1e18);
+  border: 1px solid #e5bd8630;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.note .big-star {
+  font-size: 27px;
+  color: var(--gold);
+}
+
+.note h2 {
+  font: 500 32px 'Playfair Display', serif;
+  margin: 16px 0;
+}
+
+.note p {
+  color: #ddc8ae;
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.surprise-wrap {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.surprise {
+  display: none;
+  margin: 30px auto 0;
+  max-width: 650px;
+  animation: appear .8s ease both;
+}
+
+.surprise.show { display: block; }
+
+.final-card {
+  padding: 35px 20px;
+  background: #f0dfc8;
+  color: #39241b;
+  border-radius: 8px;
+  transform: rotate(-1deg);
+  box-shadow: 0 20px 50px #0004;
+}
+
+.final-card .tiny {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #956d4b;
+  font-weight: 700;
+}
+
+.final-card h2 {
+  font: 500 clamp(28px, 5vw, 43px)/1.2 'Playfair Display', serif;
+  margin: 20px 0;
+}
+
+.final-card .punchline {
+  display: block;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #b69b7d;
+  color: #873b32;
+  font-weight: 800;
+  font-size: clamp(17px, 3vw, 23px);
+  line-height: 1.5;
+}
+
+.final-card .laugh {
+  font-size: 25px;
+  margin: 15px 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px 45px;
+  color: #a58a70;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.leaf {
+  position: fixed;
+  top: -40px;
+  z-index: 2;
+  pointer-events: none;
+  color: #bd8151;
+  opacity: .65;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(700deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  nav { padding: 18px 18px; }
+  .brand { font-size: 16px; }
+  .music-btn { font-size: 12px; padding: 9px 11px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 24px 70px;
+    gap: 55px;
+    text-align: center;
+  }
+
+  .hero-desc { margin-inline: auto; }
+  .eyebrow { justify-content: center; }
+
+  .hero-photo { max-width: 320px; }
+  .hero-photo img { height: 360px; }
+
+  .section { padding: 55px 22px; }
+  .gallery { grid-template-columns: 1fr; gap: 28px; }
+  .gallery-card { max-width: 390px; margin: auto; width: 100%; }
+  .gallery-card img { height: 420px; }
+  .note { padding: 27px 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" src="lagu.mp3" loop preload="none"></audio>
+
+<nav>
+  <div class="brand">OCTOBER <span>✳</span> NOTES</div>
+  <button class="music-btn" id="musicBtn" type="button">♫ Putar Musik</button>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <div>
+      <div class="eyebrow">A special October day</div>
+      <h1>Happy Birthday,<em>Madam Madam Ara Ayu.</em></h1>
+
+      <p class="hero-desc">
+        Satu tahun bertambah, satu level kehidupan terbuka.
+        Semoga hari ini penuh tawa, hal-hal baik, dan kue yang
+        nggak perlu dibagi terlalu banyak. 🍰
+      </p>
+
+      <button class="primary-btn" type="button"
+        onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+        Lihat Kenangan ↓
+      </button>
+    </div>
+
+    <div class="hero-photo">
+      <div class="tape"></div>
+      <img src="Madam Ara-2.jpg" alt="Foto Madam Ara saat ulang tahun"
+        onerror="this.style.objectFit='contain';this.alt='Simpan foto kedua sebagai Madam Ara-2.jpg';">
+      <div class="photo-caption">A little birthday moment ♡</div>
+      <div class="photo-stamp">HAPPY<br>BIRTHDAY<br>✳</div>
+    </div>
+  </section>
+
+  <section class="section" id="memories">
+    <div class="section-heading">
+      <div class="eyebrow">Little memories</div>
+      <h2>Captured in October</h2>
+      <p>Dua foto, satu kue, dan ekspresi yang beda tipis. 🍂</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-card">
+        <img src="Madam Ara-1.jpg" alt="Madam Ara meniup lilin ulang tahun"
+          onerror="this.alt='Simpan foto pertama sebagai Madam Ara-1.jpg';">
+        <p>Make a wish ✨</p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="Madam Ara-2.jpg" alt="Madam Ara tersenyum membawa kue"
+          onerror="this.alt='Simpan foto kedua sebagai Madam Ara-2.jpg';">
+        <p>And keep that smile ♡</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="big-star">✳</div>
+      <h2>For your new chapter</h2>
+      <p>
+        Selamat ulang tahun, Madam Ara! Semoga panjang umur, sehat selalu,
+        dilancarkan semua urusannya, dimudahkan rezekinya, dan makin
+        banyak alasan buat bahagia.<br><br>
+
+        Semoga apa yang lagi diperjuangkan pelan-pelan menemukan
+        jalannya. Kalau ada hari yang berat, semoga selalu ada
+        hal kecil yang bikin kamu senyum lagi.<br><br>
+
+        Pokoknya semoga makin sukses, makin kuat menghadapi kehidupan,
+        dan jangan lupa bahagia. Dunia udah cukup ribet, jangan ikut
+        nambahin keribetan sendiri ya wkwk. 🍰
+      </p>
+    </div>
+
+    <div class="surprise-wrap">
+      <div class="eyebrow">One last thing</div>
+      <h2 style="font:500 30px 'Playfair Display',serif;margin:16px 0;">
+        Ada pesan terakhir nih...
+      </h2>
+      <p style="color:var(--muted);font-size:13px;">
+        Serius dikit boleh, tapi bentar doang.
+      </p>
+
+      <button class="primary-btn" id="surpriseBtn" type="button">
+        Buka Pesan Terakhir 🎁
+      </button>
+
+      <div class="surprise" id="surprise">
+        <div class="final-card">
+          <div class="tiny">OFFICIAL OCTOBER ANNOUNCEMENT</div>
+          <h2>Terima kasih sudah bertambah usia.</h2>
+          <p>
+            Semoga semua doa baiknya terkabul.
+            Sehat terus, bahagia terus, dan semoga orang-orang
+            di sekitar kamu juga makin sukses.
+          </p>
+          <span class="punchline">
+            NAIKAN GAJI BENG,<br>
+            PECUT ELJIMOG!!
+          </span>
+          <p class="laugh">😭💀🍂</p>
+          <p style="font-size:11px;color:#956d4b;margin-top:15px;">
+            — pesan terakhir yang ternyata paling penting
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  MADE WITH ✳ FOR Madam Ara AYU · OCTOBER NOTES
+</footer>
+
+<script>
+const music = document.getElementById('music');
+const musicBtn = document.getElementById('musicBtn');
+const surpriseBtn = document.getElementById('surpriseBtn');
+const surprise = document.getElementById('surprise');
+
+musicBtn.addEventListener('click', async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicBtn.textContent = '♫ Jeda Musik';
+    } catch (error) {
+      musicBtn.textContent = 'Musik gagal diputar';
+      alert('Pastikan file lagu.mp3 ada di folder yang sama dengan index.html.');
+    }
+  } else {
+    music.pause();
+    musicBtn.textContent = '♫ Putar Musik';
+  }
+});
+
+music.addEventListener('ended', () => {
+  musicBtn.textContent = '♫ Putar Musik';
+});
+
+surpriseBtn.addEventListener('click', () => {
+  surprise.classList.toggle('show');
+
+  if (surprise.classList.contains('show')) {
+    surpriseBtn.textContent = 'Tutup Pesan ↑';
+    surprise.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    burstLeaves();
+  } else {
+    surpriseBtn.textContent = 'Buka Pesan Terakhir 🎁';
+  }
+});
+
+function burstLeaves() {
+  const symbols = ['🍂', '✳', '🍁', '✦'];
+
+  for (let i = 0; i < 24; i++) {
+    const leaf = document.createElement('span');
+    leaf.className = 'leaf';
+    leaf.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    leaf.style.left = Math.random() * 100 + 'vw';
+    leaf.style.fontSize = (14 + Math.random() * 17) + 'px';
+    leaf.style.animationDuration = (3 + Math.random() * 4) + 's';
+    document.body.appendChild(leaf);
+    leaf.addEventListener('animationend', () => leaf.remove());
+  }
+}
+
+// Daun musim gugur muncul sesekali, tidak memenuhi layar.
+setInterval(() => {
+  if (document.hidden) return;
+
+  const leaf = document.createElement('span');
+  leaf.className = 'leaf';
+  leaf.textContent = Math.random() > 0.5 ? '🍂' : '✦';
+  leaf.style.left = Math.random() * 100 + 'vw';
+  leaf.style.fontSize = (12 + Math.random() * 12) + 'px';
+  leaf.style.animationDuration = (6 + Math.random() * 5) + 's';
+  document.body.appendChild(leaf);
+  leaf.addEventListener('animationend', () => leaf.remove());
+}, 1300);
+</script>
+
+</body>
+</html>
+```
